@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: "Public Sans" sans-serif;
+    background-image:url(../images/hero-bg2.png), url(../images/hero-bg1.png);
+    background-repeat: no-repeat;
+    background-position: top right; 
+    background-color:var(--body-bg);
+}

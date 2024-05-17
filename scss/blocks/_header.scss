@@ -1,0 +1,90 @@
+.site-header {
+    padding: 18px 0;
+    background-color: var(--header-bg);
+    position: relative;
+}
+
+.header-top {
+    @include display
+}
+.header-top__link {
+    display: inline-block;
+}
+
+.navbar__list {
+    @include display($jc:center);
+}
+.navbar__item + .navbar__item {
+    margin-left:30px;
+}
+.navbar__link {
+    @include linkStyle();
+}
+.header-top__mode-wrapper {
+    @include display($al:center,$jc:space-between);
+    gap: 10px;
+}
+.header-top__request-btn {
+    @include buttonStyle($w:163px);
+    
+}
+.header-top__mode-btn {
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--btn-bg);
+    border: none;
+    color:var(--moon-color);
+    @include display($al:center, $jc:center);
+    cursor: pointer;
+}
+
+.header-top__hamburger-btn {
+    display: none;
+    border: none;
+background-color: transparent;
+color: var(--hamburger-color);
+}
+
+.header-menu{
+    padding: 24px;
+}
+
+
+
+.menu__list{
+    width: 90%;
+    margin: 0 auto;
+    padding: 32px 0;
+    left: -200%;
+    right: 0;
+    text-align:center;
+    background-color: lightblue;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: -1px;
+    letter-spacing: -0.14px;
+    transition: all 0.3s linear;
+}
+
+.open{
+    left: 0;
+}
+.menu__link{
+    color: indigo;
+}
+
+@media (max-width:763px){
+    .navbar, .header-top__request-btn{
+        display: none;
+    }
+    .header-top__hamburger-btn{
+        display: block;
+    }
+}
